@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import {createRoot} from "react-dom/client"
+import Nav from "./Nav";
+import Menu from "./Menu";
+import Movie from "./Movie";
+import Song from "./Song";
+import Tv from "./Tv";
+import Search from "./Search";
+import Recent from "./Recent";
+import Quat from "./Quat";
+import Comment from "./Comment";
+import Footer from "./Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+createRoot(document.getElementById("navbar")).render(<Nav/>)
+createRoot(document.getElementById("menu")).render(<Menu/>)
+createRoot(document.getElementById("search")).render(<Search/>)
+createRoot(document.getElementById("recent")).render(<Recent/>)
+createRoot(document.getElementById("movies")).render(<Movie/>)
+createRoot(document.getElementById("songs")).render(<Song/>)
+createRoot(document.getElementById("tv")).render(<Tv/>)
+createRoot(document.getElementById("quat")).render(<Quat/>)
+createRoot(document.getElementById("comments")).render(<Comment/>)
+createRoot(document.getElementById("footer")).render(<Footer/>)
